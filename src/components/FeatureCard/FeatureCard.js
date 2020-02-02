@@ -11,7 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import history from "../../store/history";
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345
+    width: "100%"
   },
   media: {
     height: 200
