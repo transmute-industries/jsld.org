@@ -1,0 +1,20 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://transmute-industries.github.io/vc-greeting-card/context/vc-greeting-card-v0.0.jsonld"
+  ],
+  "id": "https://example.com/credentials/1872",
+  "type": ["VerifiableCredential", "GreetingCard"],
+  "issuer": "did:key:z6MkjfRVSmuF98wfnJGhxU6cY7H4H2TdqR5yLfKH1nxDTHWG",
+  "issuanceDate": "2020-02-02T16:18:57.909Z",
+  "credentialSubject": {
+    "id": "did:example:123",
+    "greetingCard": {
+      "type": "HolidayCard",
+      "image": "http://i.imgur.com/SxtVfyQ.jpg",
+      "message": "Happy Holidays!",
+      "from": "did:key:z6MkjfRVSmuF98wfnJGhxU6cY7H4H2TdqR5yLfKH1nxDTHWG",
+      "to": "did:example:123"
+    }
+  }
+}

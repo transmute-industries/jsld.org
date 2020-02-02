@@ -24,6 +24,8 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import primarySearchAccountMenuMobile from "./primarySearchAccountMenuMobile";
 import primarySearchAccountMenu from "./primarySearchAccountMenu";
 
+import history from "../../store/history";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -234,18 +236,24 @@ function AppBarWithDrawer({ headerImage, headerText, drawer, content }) {
             <MenuIcon />
           </IconButton>
 
-          {headerImage ? (
-            <img
-              src={headerImage}
-              alt={headerText}
-              className={classes.title}
-              style={{ height: "28px" }}
-            />
-          ) : (
-            <Typography className={classes.title} variant="h6" noWrap>
-              {headerText}
-            </Typography>
-          )}
+          <span
+            onClick={() => {
+              history.push("/");
+            }}
+          >
+            {headerImage ? (
+              <img
+                src={headerImage}
+                alt={headerText}
+                className={classes.title}
+                style={{ height: "28px" }}
+              />
+            ) : (
+              <Typography className={classes.title} variant="h6" noWrap>
+                {headerText}
+              </Typography>
+            )}
+          </span>
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>

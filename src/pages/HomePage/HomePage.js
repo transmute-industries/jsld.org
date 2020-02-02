@@ -3,68 +3,13 @@ import PropTypes from "prop-types";
 
 import Link from "@material-ui/core/Link";
 // import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { Helmet } from "react-helmet";
 
 import BasePage from "../BasePage/BasePage";
 
-// import history from "../../store/history";
-
-import AgriculturalFuturesDemo from "../../components/AgriculturalFuturesDemo/AgriculturalFuturesDemo";
-
-// const hasUnlockedKeystore = props => {
-//   return (
-//     props.keystore.keystore && typeof props.keystore.keystore.data === "object"
-//   );
-// };
-
-// const CallToAction = props => {
-//   if (!hasUnlockedKeystore(props)) {
-//     return (
-//       <Button
-//         style={{ float: "right" }}
-//         variant={"contained"}
-//         color={"primary"}
-//         onClick={() => {
-//           history.push("/keystore");
-//         }}
-//       >
-//         Create
-//       </Button>
-//     );
-//   }
-//   if (hasUnlockedKeystore(props)) {
-//     return (
-//       <Button
-//         style={{ float: "right" }}
-//         variant={"contained"}
-//         color={"primary"}
-//         onClick={() => {
-//           history.push("/documents");
-//         }}
-//       >
-//         Explore
-//       </Button>
-//     );
-//   }
-// };
-
-// const ExplainerText = props => {
-//   if (!hasUnlockedKeystore(props)) {
-//     return (
-//       <Typography paragraph>
-//         Before proceeding, please ensure you setup a keystore.
-//       </Typography>
-//     );
-//   }
-//   if (hasUnlockedKeystore(props)) {
-//     return (
-//       <Typography paragraph>
-//         You have an unlocked keystore and are ready to explore.
-//       </Typography>
-//     );
-//   }
-// };
+import FeatureCard from "../../components/FeatureCard/FeatureCard";
 
 const jsonldPageAnnotation = {
   "@context": "http://schema.org",
@@ -84,193 +29,82 @@ const HomePage = props => (
         }}
       ></script>
     </Helmet>
-    {/* <Typography variant="h3" gutterBottom>
-      Home
-      <CallToAction {...props} />
-    </Typography>
-    <br />
-    <ExplainerText {...props} />
-    <br /> */}
     <Typography variant="h5" gutterBottom>
-      What is JSON-LD?
+      What is Linked Data?
     </Typography>
     <Typography paragraph>
-      JSON-LD is designed to be usable directly as JSON, with no knowledge of
-      RDF. It is also designed to be usable as RDF, if desired, for use with
-      other Linked Data technologies like SPARQL. Developers who require any of
-      the facilities listed above or need to serialize an RDF Graph or RDF
-      Dataset in a JSON-based syntax will find JSON-LD of interest. People
-      intending to use JSON-LD with RDF tools will find it can be used as
-      another RDF syntax, like Turtle.
+      "In computing, linked data (often capitalized as Linked Data) is
+      structured data which is interlinked with other data so it becomes more
+      useful through semantic queries. It builds upon standard Web technologies
+      such as HTTP, RDF and URIs, but rather than using them to serve web pages
+      only for human readers, it extends them to share information in a way that
+      can be read automatically by computers. Part of the vision of linked data
+      is for the Internet to become a global database."
     </Typography>
-    <Link href="https://www.w3.org/TR/json-ld/">Read JSON-LD Spec</Link>
-    <br />
-    <br />
-    <Typography variant="h5" gutterBottom>
-      Case Study: Agricultural Futures
-    </Typography>
-    <Typography paragraph>
-      How can we use JSON-LD along with other semantic web technologies to
-      tackle agricultural futures? See this brief overview of agricultural
-      futures.
-    </Typography>
-    <iframe
-      title="agricultural futures"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/IhAHOlnnl1g"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <br />
-    <Typography variant="h5">
-      Let's investigate some of the key technical areas covered or implied in
-      the video.
+    <Typography variant={"body2"}>
+      <i>JSON-LD is Linked Data represented as JSON...</i>{" "}
+      <Link href="https://en.wikipedia.org/wiki/Linked_data">Learn More.</Link>
     </Typography>
     <br />
-    <Typography variant="h6" gutterBottom>
-      Futures Trader
+    <Typography variant={"h6"} gutterBottom>
+      Case Studies
     </Typography>
-    <Typography paragraph>A Person who trades agricultural futures.</Typography>
-    <Typography variant="h6" gutterBottom>
-      Commodity
-    </Typography>
-    <Typography paragraph>
-      Products such as Cattle, Corn or Soybeans.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Seasonality
-    </Typography>
-    <Typography paragraph>
-      Some products can only be produced during certain times of year. This
-      creates a supply and demand cycle, creating the need for accurate
-      forcasts.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Crop Yields
-    </Typography>
-    <Typography paragraph>
-      Analysts must address uncertainty regarding crop yields.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Production Cycle
-    </Typography>
-    <Typography paragraph>
-      Planting, Growth and Harvesting, factors impacting each phase can cause
-      changes in price.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Weather
-    </Typography>
-    <Typography paragraph>
-      Weather is the most import factor affecting price for most agricultural
-      products.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Data Sources
-    </Typography>
-    <Typography paragraph>
-      Internet of things device feeds, NOAA weather reports, satellite data
-      might help provide aditional context about factors impating crop yield.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Government Subsidies
-    </Typography>
-    <Typography paragraph>
-      Financial incentives can cause farmers to choose to produce different
-      products, impacting supply and affecting price.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      Market Activity
-    </Typography>
-    <Typography paragraph>
-      International markets, changes in trade regulations and cultural
-      preferences could impact demand and price.
-    </Typography>
-    <Typography variant="h6" gutterBottom>
-      USDA Reports
-    </Typography>
-    <Typography paragraph>
-      For{" "}
-      <a
-        rel="noopener noreferrer"
-        href="https://downloads.usda.library.cornell.edu/usda-esmis/files/m039k491c/h989rc35c/5h73q524k/plva0519.txt"
-      >
-        example
-      </a>
-      ... "This file presents the annual estimates of production and value for
-      commercial broilers, eggs, turkeys raised, and chickens lost or sold for
-      slaughter by states and U.S. The report also highlights changes in the
-      data in comparison to the previous years. This report supplements Broiler
-      Hatchery, Chickens and Eggs, and Turkey Hatchery, and continues Poultry
-      Production, Disposition, and Income. These estimates were based on
-      inventory, disposition, production, and price estimates as published in
-      various NASS poultry and agricultural prices reports, as well as
-      information on imports, exports, and slaughter obtained from other sources
-      "
-    </Typography>
-    <br />
-    <br />
-    <Typography variant="h6" gutterBottom>
-      Agricultural Ontologies
-    </Typography>
-    <Typography paragraph>
-      Below is a short video explaining how agricultural ontologies can model
-      the relationships among these concept, and assist with data portability,
-      enabling more accurate forcasts from integrating disperate sources of
-      information.
-    </Typography>
-    <iframe
-      title="agricultural ontologies"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/v3DjG2EMgig"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <br />
-    <Typography variant="h6" gutterBottom>
-      Internet of Things Ontologies
-    </Typography>
-    <Typography paragraph>
-      Ontologies are also useful for modeling the relationships among data
-      collection and reporting services.
-    </Typography>
-    <iframe
-      title="iot ontologies"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/1wbXvfFsiMg"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <br />
-    <Typography variant="h6" gutterBottom>
-      Financial and Banking Ontologies
-    </Typography>
-    <Typography paragraph>
-      Ontologies are also useful for modeling the relationships among financial
-      services, vendors, banks and asset classes.
-    </Typography>
-    <iframe
-      title="financial ontologies"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/IKFHklf94lo"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <br />
 
-    <AgriculturalFuturesDemo />
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={4}>
+        <FeatureCard
+          image={"/images/id.jpg"}
+          title={"Decentralized Identifiers"}
+          description={
+            "Cryptographically self certifying identifiers for linked data enable interoperability and defend against vendor lock in."
+          }
+          link={"/did"}
+        />
+      </Grid>
+
+      <Grid item xs={12} sm={4}>
+        <FeatureCard
+          image={"/images/cert.jpg"}
+          title={"Verifiable Credentials"}
+          description={
+            "Explore, test and share semantically unambigious digital certificates that integrate seamlessly with knowledge management systems."
+          }
+          link={"/vc"}
+        />
+      </Grid>
+
+      <Grid item xs={12} sm={4}>
+        <FeatureCard
+          image={"/images/edv.jpg"}
+          title={"Encrypted Data Vaults"}
+          description={
+            "Secure, portable, interoperable data storage for use with Decentralized Identifiers."
+          }
+          link={"/edv"}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <FeatureCard
+          image={"/images/avacado.jpg"}
+          title={"Agricultural Futures"}
+          description={
+            "Learn how linked data can help forcast commodity prices by combining industry ontologies with data overlays."
+          }
+          link={"/case-study-agriculture-futures"}
+        />
+      </Grid>
+
+      <Grid item xs={12} sm={4}>
+        <FeatureCard
+          image={"/images/response.jpeg"}
+          title={"Cyber Security"}
+          description={
+            "Learn how linked data can help integrate heterogenous cyber security data with industry ontologies to improve incident response."
+          }
+          link={"/case-study-incident-response"}
+        />
+      </Grid>
+    </Grid>
   </BasePage>
 );
 
