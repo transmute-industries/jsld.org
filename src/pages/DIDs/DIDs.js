@@ -11,7 +11,13 @@ import BasePage from "../BasePage/BasePage";
 const jsonldPageAnnotation = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  name: "jsld.org"
+  url: "https://jsld.org/did",
+  description:
+    "Learn about decentralized identitifiers and software that is used to create them.",
+  maintainer: {
+    "@type": "Person",
+    name: "Orie Steele"
+  }
 };
 
 const DIDs = props => {
@@ -19,7 +25,7 @@ const DIDs = props => {
     <BasePage {...props}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>jsld.org</title>
+        <title>What is a DID?</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

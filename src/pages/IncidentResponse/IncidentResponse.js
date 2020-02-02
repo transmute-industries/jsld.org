@@ -11,7 +11,12 @@ import BasePage from "../BasePage/BasePage";
 const jsonldPageAnnotation = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  name: "jsld.org"
+  url: "https://jsld.org/case-study-incident-response",
+  description: "Learn about Cyber Security Incident Response and Linked Data.",
+  maintainer: {
+    "@type": "Person",
+    name: "Orie Steele"
+  }
 };
 
 const IncidentResponse = props => {
@@ -19,7 +24,7 @@ const IncidentResponse = props => {
     <BasePage {...props}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>jsld.org</title>
+        <title>Case Study: Incident Response</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

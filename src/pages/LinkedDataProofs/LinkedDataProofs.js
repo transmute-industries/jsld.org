@@ -22,7 +22,12 @@ const vc = require("vc-js");
 const jsonldPageAnnotation = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  name: "jsld.org"
+  url: "https://jsld.org/vc",
+  description: "Learn about Verifiable Credentials. Test and Share Examples.",
+  maintainer: {
+    "@type": "Person",
+    name: "Orie Steele"
+  }
 };
 
 const key1 = {
@@ -157,7 +162,7 @@ const LinkedDataProofs = props => {
     <BasePage {...props}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>jsld.org</title>
+        <title>What is a VC?</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -174,7 +179,7 @@ const LinkedDataProofs = props => {
               snackBarMessage: {
                 open: true,
                 variant: "default",
-                message: "Copied to link to clipboard.",
+                message: "Copied link to clipboard.",
                 vertical: "top",
                 horizontal: "right",
                 autoHideDuration: 2000

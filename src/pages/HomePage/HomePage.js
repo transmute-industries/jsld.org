@@ -14,14 +14,20 @@ import FeatureCard from "../../components/FeatureCard/FeatureCard";
 const jsonldPageAnnotation = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  name: "jsld.org"
+  url: "https://jsld.org/",
+  description:
+    "Learn about linked data, decentralized identitifiers, and other case studies.",
+  maintainer: {
+    "@type": "Person",
+    name: "Orie Steele"
+  }
 };
 
 const HomePage = props => (
   <BasePage {...props}>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>jsld.org</title>
+      <title>What is Linked Data?</title>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -69,14 +69,19 @@ import AgriculturalFuturesDemo from "../../components/AgriculturalFuturesDemo/Ag
 const jsonldPageAnnotation = {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  name: "jsld.org"
+  url: "https://jsld.org/case-study-agriculture-futures",
+  description: "Learn about Agricultural Futures and Linked Data.",
+  maintainer: {
+    "@type": "Person",
+    name: "Orie Steele"
+  }
 };
 
 const AgricultureFutures = props => (
   <BasePage {...props}>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>jsld.org</title>
+      <title>Case Study: Agricultural Futures</title>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
