@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start": "env-cmd -f ./.env.local react-scripts start",
-    "build": "rm -rf ./docs && env-cmd -f ./.env.prod react-scripts build && mv build docs",
+    "build": "rm -rf ./docs && env-cmd -f ./.env.prod react-scripts build && mv build docs && cp ./docs/index.html ./docs/404.html",
     "docs": "npm run storybook:build",
     "test": "NODE_OPTIONS='--max-old-space-size=4096' react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
