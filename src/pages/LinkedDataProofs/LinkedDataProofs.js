@@ -216,12 +216,16 @@ const LinkedDataProofs = props => {
       </Grid>
       <br />
       <br />
-      <Typography paragraph>
-        A Linked Data Proof provides authentication and integrity for linked
-        data documents using cannonicalization, hashing, and digital signatures.
+      <Typography paragraph gutterBottom>
+        A{" "}
+        <Link href="https://w3c-dvcg.github.io/ld-proofs/">
+          Linked Data Proof
+        </Link>{" "}
+        provides authentication and integrity for linked data documents using
+        cannonicalization, hashing, and digital signatures.
       </Typography>
-      <Link href="https://w3c-dvcg.github.io/ld-proofs/">Read More</Link>
-      <Typography paragraph>
+
+      <Typography paragraph gutterBottom>
         If you like JOSE and want to construct Verifiable Credentials using JWS
         / JWK, please consider contributing to or using{" "}
         <Link href="https://lds.jsld.org/">JoseLinkedDataSignature2020</Link>.
