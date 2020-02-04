@@ -228,7 +228,8 @@ const LinkedDataProofs = props => {
       <Typography paragraph gutterBottom>
         If you like JOSE and want to construct Verifiable Credentials using JWS
         / JWK, please consider contributing to or using{" "}
-        <Link href="https://lds.jsld.org/">JoseLinkedDataSignature2020</Link>.
+        <Link href="https://lds.jsld.org/">JoseLinkedDataSignature2020</Link>{" "}
+        with <Link href="https://github.com/digitalbazaar/vc-js">VC JS</Link>.
       </Typography>
     </BasePage>
   );
