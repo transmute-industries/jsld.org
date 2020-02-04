@@ -35,6 +35,7 @@ const HomePage = props => (
         }}
       ></script>
     </Helmet>
+
     <Typography variant="h5" gutterBottom>
       What is Linked Data?
     </Typography>
@@ -52,10 +53,21 @@ const HomePage = props => (
       <Link href="https://en.wikipedia.org/wiki/Linked_data">Learn More.</Link>
     </Typography>
     <br />
+    <Typography paragraph>
+      As a company,{" "}
+      <Link href="https://www.transmute.industries/">Transmute</Link> is deeply
+      committed to open standards and open source software development. Not only
+      does standardization accelerate commercialization, but adhering to
+      technical standards protects companies - by ensuring a level of rigor and
+      security agreed upon by technical and industry experts, while mitigating
+      the risks of vendor lock in. Standards-compliant technologies that are
+      open source expand upon these benefits by engaging a community of
+      developers to support, audit, abstract and maintain them.
+    </Typography>
+    <br />
     <Typography variant={"h6"} gutterBottom>
       Case Studies
     </Typography>
-
     <Grid container spacing={3}>
       <Grid item xs={12} sm={4}>
         <FeatureCard

@@ -196,7 +196,6 @@ const LinkedDataProofs = props => {
           </Button>
         </CopyToClipboard>
       </Typography>
-
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Typography paragraph>Editor</Typography>
@@ -222,6 +221,11 @@ const LinkedDataProofs = props => {
         data documents using cannonicalization, hashing, and digital signatures.
       </Typography>
       <Link href="https://w3c-dvcg.github.io/ld-proofs/">Read More</Link>
+      <Typography paragraph>
+        If you like JOSE and want to construct Verifiable Credentials using JWS
+        / JWK, please consider contributing to or using{" "}
+        <Link href="https://lds.jsld.org/">JoseLinkedDataSignature2020</Link>.
+      </Typography>
     </BasePage>
   );
 };
