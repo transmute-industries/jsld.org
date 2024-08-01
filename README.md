@@ -90,7 +90,7 @@ Because of these, and other differences between JSON and JSON-LD, RDF processing
 
 - [https://www.w3.org/TR/rdf-canon/#dataset-poisoning](https://www.w3.org/TR/rdf-canon/#dataset-poisoning)
 
-At the time of this writing, there are no specific application profiles that address the dataset poisoning attack with have W3C consensus as being suitable for use as a generic defense.
+There are currently no specific application profiles that address the dataset poisoning attack, which have W3C consensus.
 
 Each application that relies on JSON-LD based media types and requires RDF data integrity will need to document and implement mitigations.
 
