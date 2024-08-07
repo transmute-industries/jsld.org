@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://jsld.org/trace#",
+    "trace": "https://jsld.org/trace#",
+    "id": "@id",
+    "type": "@type",
+    "language": "@language",
+    "value": "@value",
+    "TraceablePresentation": {
+      "@id": "trace:traceable-presentation",
+      "@context": {
+        "workflow": {
+          "@id": "trace:workflow",
+          "@context": {
+            "definition": {
+              "@id": "trace:workflow-definition",
+              "@type": "@id"
+            },
+            "instance": {
+              "@id": "trace:workflow-instance",
+              "@type": "@id"
+            }
+          }
+        }
+      }
+    }
+  }
+}
